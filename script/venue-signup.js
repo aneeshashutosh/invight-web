@@ -155,6 +155,29 @@ $(".previous").click(function() {
 });
 
 $(".submit").click(function() {
+
+	var body = "contactName: " + contactName + "\n" +
+		"contactPosition: " + contactPosition + "\n" +
+		"contactEmail: " + contactEmail + "\n" +
+		"contactPhone: " + contactPhone + "\n" +
+		"name: " + name + "\n" +
+		"email: " + email + "\n" +
+		"password: " + password + "\n" +
+		"address: " + address + "\n" +
+		"type: " + type + "\n" +
+		"capacity: " + capacity + "\n" +
+		"rooftop: " + rooftop + "\n" +
+		"mobileOrdering: " + mobileOrdering + "\n" +
+		"currentPos: " + currentPos + "\n" +
+		"tos: " + tos + "\n";
+
+	Email.send("from@you.com",
+	"aneesh@invightapp.com",
+	"Invight Registration",
+	body,
+	"smtp.yourisp.com",
+	"username",
+	"password");
 	window.alert("Thank you for registering for Invight!");
 	return false;
 })
